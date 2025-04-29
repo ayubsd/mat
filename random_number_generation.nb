@@ -1,0 +1,395 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     11076,        386]
+NotebookOptionsPosition[      9305,        326]
+NotebookOutlinePosition[      9647,        341]
+CellTagsIndexPosition[      9604,        338]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["\<\
+Generate random number using linear congruence method for the following
+10 random number using a = 1, b= 7, c= 10
+\
+\>", "Text",
+ CellChangeTimes->{{3.9549318914376554`*^9, 3.9549319532595024`*^9}, {
+  3.9549319972889194`*^9, 3.954931997610364*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"a", "=", "1"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"b", "=", "7"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"c", "=", "10"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"x", "[", "0", "]"}], "=", "7"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Nmax", " ", "=", " ", "10"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"For", "[", 
+  RowBox[{
+   RowBox[{"n", "=", "1"}], ",", 
+   RowBox[{"n", "\[LessEqual]", "Nmax"}], ",", 
+   RowBox[{"n", "++"}], ",", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"x", "[", "n", "]"}], "=", 
+     RowBox[{"Mod", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"x", "[", 
+          RowBox[{"n", "-", "1"}], "]"}], "*", "a"}], "+", "b"}], ",", "c"}], 
+      "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"Print", "[", 
+     RowBox[{"x", "[", "n", "]"}], "]"}]}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.9549319648028417`*^9, 3.9549320920483503`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["4"], "Print",
+ CellChangeTimes->{3.954932093915309*^9}],
+
+Cell[BoxData["1"], "Print",
+ CellChangeTimes->{3.954932093916295*^9}],
+
+Cell[BoxData["8"], "Print",
+ CellChangeTimes->{3.954932093917204*^9}],
+
+Cell[BoxData["5"], "Print",
+ CellChangeTimes->{3.9549320939183*^9}],
+
+Cell[BoxData["2"], "Print",
+ CellChangeTimes->{3.9549320939183*^9}],
+
+Cell[BoxData["9"], "Print",
+ CellChangeTimes->{3.9549320939192033`*^9}],
+
+Cell[BoxData["6"], "Print",
+ CellChangeTimes->{3.9549320939202003`*^9}],
+
+Cell[BoxData["3"], "Print",
+ CellChangeTimes->{3.9549320939202003`*^9}],
+
+Cell[BoxData["0"], "Print",
+ CellChangeTimes->{3.9549320939212008`*^9}],
+
+Cell[BoxData["7"], "Print",
+ CellChangeTimes->{3.9549320939212008`*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell["\<\
+Find random number between 0 to pi and 0 to 1\
+\>", "Text",
+ CellChangeTimes->{{3.9549321929661503`*^9, 3.9549322114749875`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"a", "=", "17"}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"b", "=", "32871"}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"c", "=", "10000"}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"x", "[", "0", "]"}], "=", "7"}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"Nmax", "=", "10"}], ";"}], "\n", 
+   RowBox[{"For", "[", 
+    RowBox[{
+     RowBox[{"n", "=", "1"}], ",", 
+     RowBox[{"n", "\[LessEqual]", "Nmax"}], ",", 
+     RowBox[{"n", "++"}], ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"x", "[", "n", "]"}], "=", 
+       RowBox[{"Mod", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{"x", "[", 
+            RowBox[{"n", "-", "1"}], "]"}], "*", "a"}], "+", "b"}], ",", 
+         "c"}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"Print", "[", 
+       RowBox[{"N", "[", 
+        RowBox[{"Pi", "*", 
+         RowBox[{
+          RowBox[{"x", "[", "n", "]"}], "/", "10000"}]}], "]"}], "]"}]}]}], 
+    "]"}], "\n", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"y", "[", "0", "]"}], "=", "8"}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"Nmax", "=", "10"}], ";"}], "\n", 
+   RowBox[{"For", "[", 
+    RowBox[{
+     RowBox[{"n", "=", "1"}], ",", 
+     RowBox[{"n", "\[LessEqual]", "Nmax"}], ",", 
+     RowBox[{"n", "++"}], ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"y", "[", "n", "]"}], "=", 
+       RowBox[{"Mod", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{"y", "[", 
+            RowBox[{"n", "-", "1"}], "]"}], "*", "a"}], "+", "b"}], ",", 
+         "c"}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"Print", "[", 
+       RowBox[{"N", "[", 
+        RowBox[{
+         RowBox[{"y", "[", "n", "]"}], "/", "10000"}], "]"}], "]"}]}]}], 
+    "]"}], "\n"}]}]], "Input",
+ CellChangeTimes->{{3.9549321808566656`*^9, 3.9549321858917694`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["0.9393362034233481`"], "Print",
+ CellChangeTimes->{3.954932244608943*^9}],
+
+Cell[BoxData["1.1627034410935824`"], "Print",
+ CellChangeTimes->{3.954932244610134*^9}],
+
+Cell[BoxData["1.8183538278977722`"], "Print",
+ CellChangeTimes->{3.9549322446112447`*^9}],
+
+Cell[BoxData["0.3980397892098268`"], "Print",
+ CellChangeTimes->{3.954932244613249*^9}],
+
+Cell[BoxData["1.3854423602330987`"], "Print",
+ CellChangeTimes->{3.954932244613249*^9}],
+
+Cell[BoxData["2.463322799679757`"], "Print",
+ CellChangeTimes->{3.954932244614249*^9}],
+
+Cell[BoxData["1.9377343487341845`"], "Print",
+ CellChangeTimes->{3.954932244614249*^9}],
+
+Cell[BoxData["2.4275086434288333`"], "Print",
+ CellChangeTimes->{3.954932244615249*^9}],
+
+Cell[BoxData["1.3288936924684824`"], "Print",
+ CellChangeTimes->{3.954932244615249*^9}],
+
+Cell[BoxData["1.5019954476812802`"], "Print",
+ CellChangeTimes->{3.954932244616249*^9}],
+
+Cell[BoxData["0.3007`"], "Print",
+ CellChangeTimes->{3.954932244616249*^9}],
+
+Cell[BoxData["0.399`"], "Print",
+ CellChangeTimes->{3.9549322446172485`*^9}],
+
+Cell[BoxData["0.0701`"], "Print",
+ CellChangeTimes->{3.9549322446172485`*^9}],
+
+Cell[BoxData["0.4788`"], "Print",
+ CellChangeTimes->{3.9549322446172485`*^9}],
+
+Cell[BoxData["0.4267`"], "Print",
+ CellChangeTimes->{3.95493224461825*^9}],
+
+Cell[BoxData["0.541`"], "Print",
+ CellChangeTimes->{3.95493224461825*^9}],
+
+Cell[BoxData["0.4841`"], "Print",
+ CellChangeTimes->{3.9549322446192493`*^9}],
+
+Cell[BoxData["0.5168`"], "Print",
+ CellChangeTimes->{3.9549322446192493`*^9}],
+
+Cell[BoxData["0.0727`"], "Print",
+ CellChangeTimes->{3.9549322446192493`*^9}],
+
+Cell[BoxData["0.523`"], "Print",
+ CellChangeTimes->{3.9549322446202493`*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell["\<\
+Using random number generation , find the area under curve y = Sin[t] between \
+0 to pi\
+\>", "Text",
+ CellChangeTimes->{{3.9549322922722607`*^9, 3.9549323225094523`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"a", "=", "17"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"b", "=", "32871"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"c", "=", "10000"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"x", "[", "0", "]"}], "=", "7"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"Nmax", "=", "2000"}], ";"}], "\n", 
+ RowBox[{"For", "[", 
+  RowBox[{
+   RowBox[{"n", "=", "1"}], ",", 
+   RowBox[{"n", "\[LessEqual]", "Nmax"}], ",", 
+   RowBox[{"n", "++"}], ",", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"x", "[", "n", "]"}], "=", 
+     RowBox[{"Mod", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"x", "[", 
+          RowBox[{"n", "-", "1"}], "]"}], "*", "a"}], "+", "b"}], ",", "c"}], 
+      "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"xnorm", "[", "n", "]"}], "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"x", "[", "n", "]"}], "/", "10000"}], "*", "Pi"}]}]}]}], 
+  "]"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"y", "[", "0", "]"}], "=", "8"}], ";"}], "\n", 
+ RowBox[{"For", "[", 
+  RowBox[{
+   RowBox[{"n", "=", "1"}], ",", 
+   RowBox[{"n", "\[LessEqual]", "Nmax"}], ",", 
+   RowBox[{"n", "++"}], ",", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"y", "[", "n", "]"}], "=", 
+     RowBox[{"Mod", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"y", "[", 
+          RowBox[{"n", "-", "1"}], "]"}], "*", "a"}], "+", "b"}], ",", "c"}], 
+      "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"ynorm", "[", "n", "]"}], "=", 
+     RowBox[{
+      RowBox[{"y", "[", "n", "]"}], "/", "10000"}]}]}]}], "]"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"f", "[", "t_", "]"}], "=", 
+   RowBox[{"Sin", "[", "t", "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"undercurve", "=", 
+   RowBox[{"{", "}"}]}], ";"}], "\n", 
+ RowBox[{"For", "[", 
+  RowBox[{
+   RowBox[{"n", "=", "1"}], ",", 
+   RowBox[{"n", "\[LessEqual]", "Nmax"}], ",", 
+   RowBox[{"n", "++"}], ",", 
+   RowBox[{"If", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"ynorm", "[", "n", "]"}], "<", 
+      RowBox[{"f", "[", 
+       RowBox[{"xnorm", "[", "n", "]"}], "]"}]}], ",", 
+     RowBox[{"AppendTo", "[", 
+      RowBox[{"undercurve", ",", 
+       RowBox[{"xnorm", "[", "n", "]"}]}], "]"}]}], "]"}]}], "]"}], "\n", 
+ RowBox[{"Length", "[", "undercurve", "]"}], "\n", 
+ RowBox[{"N", "[", 
+  RowBox[{"Pi", "*", 
+   RowBox[{
+    RowBox[{"Length", "[", "undercurve", "]"}], "/", "Nmax"}]}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.9549322803038645`*^9, 3.9549322853588486`*^9}}],
+
+Cell[BoxData["1278"], "Output",
+ CellChangeTimes->{3.954932328238658*^9}],
+
+Cell[BoxData["2.0074777056438777`"], "Output",
+ CellChangeTimes->{3.954932328238658*^9}]
+}, Open  ]]
+},
+WindowSize->{707, 592},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (January 25, 2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 259, 6, 68, "Text"],
+Cell[CellGroupData[{
+Cell[841, 30, 999, 28, 172, "Input"],
+Cell[CellGroupData[{
+Cell[1865, 62, 69, 1, 23, "Print"],
+Cell[1937, 65, 69, 1, 23, "Print"],
+Cell[2009, 68, 69, 1, 23, "Print"],
+Cell[2081, 71, 67, 1, 23, "Print"],
+Cell[2151, 74, 67, 1, 23, "Print"],
+Cell[2221, 77, 71, 1, 23, "Print"],
+Cell[2295, 80, 71, 1, 23, "Print"],
+Cell[2369, 83, 71, 1, 23, "Print"],
+Cell[2443, 86, 71, 1, 23, "Print"],
+Cell[2517, 89, 71, 1, 23, "Print"]
+}, Open  ]]
+}, Open  ]],
+Cell[2615, 94, 139, 3, 30, "Text"],
+Cell[CellGroupData[{
+Cell[2779, 101, 1898, 60, 272, "Input"],
+Cell[CellGroupData[{
+Cell[4702, 165, 87, 1, 23, "Print"],
+Cell[4792, 168, 87, 1, 23, "Print"],
+Cell[4882, 171, 89, 1, 23, "Print"],
+Cell[4974, 174, 87, 1, 23, "Print"],
+Cell[5064, 177, 87, 1, 23, "Print"],
+Cell[5154, 180, 86, 1, 23, "Print"],
+Cell[5243, 183, 87, 1, 23, "Print"],
+Cell[5333, 186, 87, 1, 23, "Print"],
+Cell[5423, 189, 87, 1, 23, "Print"],
+Cell[5513, 192, 87, 1, 23, "Print"],
+Cell[5603, 195, 75, 1, 23, "Print"],
+Cell[5681, 198, 76, 1, 23, "Print"],
+Cell[5760, 201, 77, 1, 23, "Print"],
+Cell[5840, 204, 77, 1, 23, "Print"],
+Cell[5920, 207, 74, 1, 23, "Print"],
+Cell[5997, 210, 73, 1, 23, "Print"],
+Cell[6073, 213, 77, 1, 23, "Print"],
+Cell[6153, 216, 77, 1, 23, "Print"],
+Cell[6233, 219, 77, 1, 23, "Print"],
+Cell[6313, 222, 76, 1, 23, "Print"]
+}, Open  ]]
+}, Open  ]],
+Cell[6416, 227, 181, 4, 30, "Text"],
+Cell[CellGroupData[{
+Cell[6622, 235, 2500, 82, 332, "Input"],
+Cell[9125, 319, 73, 1, 31, "Output"],
+Cell[9201, 322, 88, 1, 31, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

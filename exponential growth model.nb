@@ -1,0 +1,315 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      9212,        306]
+NotebookOptionsPosition[      8298,        272]
+NotebookOutlinePosition[      8640,        287]
+CellTagsIndexPosition[      8597,        284]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{3.954916148537668*^9}],
+
+Cell["\<\
+ EXPONENTIAL GROWTH MODE
+ Example 1:- Suppose that the population of a certain country grows at an \
+annual rate of 
+2%.If the current  population is 3 million, what will the population be in 10 \
+years? Also plot 
+the graph of the solution.
+ Solution :-  Here x0 = 3, k = 2% = 0.02, t = 10 years, x[t]= ?\
+\>", "Text",
+ CellChangeTimes->{{3.9549162020951266`*^9, 3.95491622097325*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"sol", "=", 
+  RowBox[{"DSolve", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"z", "'"}], "[", "t", "]"}], "\[Equal]", 
+     RowBox[{"k", " ", 
+      RowBox[{"z", "[", "t", "]"}]}]}], ",", 
+    RowBox[{"z", "[", "t", "]"}], ",", "t"}], "]"}]}], "\n", 
+ RowBox[{"solution", "=", 
+  RowBox[{"Evaluate", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"z", "[", "t", "]"}], "/.", 
+     RowBox[{"sol", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}]}], 
+    "/.", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"k", "\[Rule]", "0.02"}], ",", 
+      RowBox[{
+       RowBox[{"C", "[", "1", "]"}], "\[Rule]", "3"}]}], "}"}]}], 
+   "]"}]}], "\n", 
+ RowBox[{"Plot", "[", 
+  RowBox[{"solution", ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", 
+     RowBox[{"-", "15"}], ",", "15"}], "}"}], ",", 
+   RowBox[{"PlotStyle", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"Green", ",", 
+      RowBox[{"Thickness", "[", "0.01", "]"}]}], "}"}]}], ",", 
+   RowBox[{"AxesLabel", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"\"\<t\>\"", ",", "\"\<z[t]\>\""}], "}"}]}], ",", 
+   RowBox[{"AxesStyle", "\[Rule]", 
+    RowBox[{"Arrowheads", "[", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", "0.03"}], ",", "0.03"}], "}"}], "]"}]}], ",", 
+   RowBox[{"Frame", "\[Rule]", "True"}]}], "]"}], "\n", 
+ RowBox[{
+  RowBox[{"z10", "=", 
+   RowBox[{"solution", "/.", 
+    RowBox[{"{", 
+     RowBox[{"t", "\[Rule]", "10"}], "}"}]}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.95491623069829*^9, 3.95491623069829*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"z", "[", "t", "]"}], "\[Rule]", 
+    RowBox[{
+     SuperscriptBox["\[ExponentialE]", 
+      RowBox[{"k", " ", "t"}]], " ", 
+     RowBox[{"C", "[", "1", "]"}]}]}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{3.954916232891512*^9}],
+
+Cell[BoxData[
+ RowBox[{"3", " ", 
+  SuperscriptBox["\[ExponentialE]", 
+   RowBox[{"0.02`", " ", "t"}]]}]], "Output",
+ CellChangeTimes->{3.9549162328946238`*^9}]
+}, Open  ]],
+
+Cell["If we have to find time for some x[t]=5, then ", "Text",
+ CellChangeTimes->{{3.9549165470700607`*^9, 3.9549166665055513`*^9}, {
+  3.954916754124343*^9, 3.954916755812874*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.9549166477360992`*^9, 3.954916658042366*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"sol", "=", 
+  RowBox[{"DSolve", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"y", "'"}], "[", "t", "]"}], "\[Equal]", 
+     RowBox[{"k", " ", 
+      RowBox[{"y", "[", "t", "]"}]}]}], ",", 
+    RowBox[{"y", "[", "t", "]"}], ",", "t"}], "]"}]}], "\n", 
+ RowBox[{"sol1", "=", 
+  RowBox[{"Evaluate", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"y", "[", "t", "]"}], "/.", 
+     RowBox[{"sol", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}]}], 
+    "/.", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"k", "\[Rule]", "0.02"}], ",", 
+      RowBox[{
+       RowBox[{"C", "[", "1", "]"}], "\[Rule]", "3"}]}], "}"}]}], 
+   "]"}]}], "\n", 
+ RowBox[{"Plot", "[", 
+  RowBox[{"sol1", ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", 
+     RowBox[{"-", "50"}], ",", "50"}], "}"}], ",", 
+   RowBox[{"PlotStyle", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"Green", ",", 
+      RowBox[{"Thickness", "[", "0.01", "]"}]}], "}"}]}], ",", 
+   RowBox[{"AxesLabel", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"\"\<t\>\"", ",", "\"\<y[t]\>\""}], "}"}]}], ",", 
+   RowBox[{"AxesStyle", "\[Rule]", 
+    RowBox[{"Arrowheads", "[", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", "0.03"}], ",", "0.03"}], "}"}], "]"}]}], ",", 
+   RowBox[{"Frame", "\[Rule]", "True"}]}], "]"}], "\n", 
+ RowBox[{"Solve", "[", 
+  RowBox[{
+   RowBox[{"sol1", "\[Equal]", "5"}], ",", "t"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.9549166769160104`*^9, 3.9549166769175167`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"y", "[", "t", "]"}], "\[Rule]", 
+    RowBox[{
+     SuperscriptBox["\[ExponentialE]", 
+      RowBox[{"k", " ", "t"}]], " ", 
+     RowBox[{"C", "[", "1", "]"}]}]}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{3.954916734989951*^9}],
+
+Cell[BoxData[
+ RowBox[{"3", " ", 
+  SuperscriptBox["\[ExponentialE]", 
+   RowBox[{"0.02`", " ", "t"}]]}]], "Output",
+ CellChangeTimes->{3.954916734989951*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"{", 
+   RowBox[{"{", 
+    RowBox[{"t", "\[Rule]", "25.541281188299536`"}], "}"}], "}"}], 
+  "\[IndentingNewLine]", "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.95491695803144*^9, 3.954916959956204*^9}}],
+
+Cell["\<\
+EXPONENTIAL DECAY MODEL
+ Example 1 :- Suppose that a certain radioactive element has an annual decay \
+rate of 10% 
+starting with a 200 gram sample of the element, how many grams will be left \
+in 3 years ? 
+Solution :- Here k =10%=0.1, x(0) = 200, t=3, x(t) = ?
+\
+\>", "Text",
+ CellChangeTimes->{{3.9549169509280806`*^9, 3.9549169649633384`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Sol", "=", 
+   RowBox[{"DSolve", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"y", "'"}], "[", "t", "]"}], "\[Equal]", 
+      RowBox[{
+       RowBox[{"-", "k"}], " ", 
+       RowBox[{"y", "[", "t", "]"}]}]}], ",", 
+     RowBox[{"y", "[", "t", "]"}], ",", "t"}], "]"}]}], ";"}], "\n", 
+ RowBox[{"tempSol", "=", 
+  RowBox[{
+   RowBox[{"Sol", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], "/.", 
+   RowBox[{"{", 
+    RowBox[{"k", "\[Rule]", "1.0"}], "}"}]}]}], "\n", 
+ RowBox[{"c1Value", "=", 
+  RowBox[{
+   RowBox[{"200", "/", 
+    RowBox[{"(", 
+     RowBox[{"Exp", "[", 
+      RowBox[{
+       RowBox[{"-", "1.0"}], "*", "3"}], "]"}], ")"}]}], "//", "N"}]}], "\n", 
+ RowBox[{"finalSol", "=", 
+  RowBox[{"tempSol", "/.", 
+   RowBox[{
+    RowBox[{"C", "[", "1", "]"}], "\[Rule]", "c1Value"}]}]}], "\n", 
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"Evaluate", "[", 
+    RowBox[{
+     RowBox[{"y", "[", "t", "]"}], "/.", "finalSol"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", 
+     RowBox[{"-", "50"}], ",", "50"}], "}"}], ",", 
+   RowBox[{"PlotStyle", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"Red", ",", 
+      RowBox[{"Thickness", "[", "0.01", "]"}]}], "}"}]}], ",", 
+   RowBox[{"AxesLabel", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"\"\<t\>\"", ",", "\"\<y[t]\>\""}], "}"}]}], ",", 
+   RowBox[{"AxesStyle", "\[Rule]", 
+    RowBox[{"Arrowheads", "[", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", "0.03"}], ",", "0.03"}], "}"}], "]"}]}], ",", 
+   RowBox[{"Frame", "\[Rule]", "True"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.9549170599805913`*^9, 3.9549170599805913`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"y", "[", "t", "]"}], "\[Rule]", 
+   RowBox[{
+    SuperscriptBox["\[ExponentialE]", 
+     RowBox[{
+      RowBox[{"-", "1.`"}], " ", "t"}]], " ", 
+    RowBox[{"C", "[", "1", "]"}]}]}], "}"}]], "Output",
+ CellChangeTimes->{3.954917085552673*^9}],
+
+Cell[BoxData["4017.1073846375334`"], "Output",
+ CellChangeTimes->{3.954917085553672*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"y", "[", "t", "]"}], "\[Rule]", 
+   RowBox[{"4017.1073846375334`", " ", 
+    SuperscriptBox["\[ExponentialE]", 
+     RowBox[{
+      RowBox[{"-", "1.`"}], " ", "t"}]]}]}], "}"}]], "Output",
+ CellChangeTimes->{3.9549170855546713`*^9}]
+}, Open  ]]
+},
+WindowSize->{707, 592},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (January 25, 2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 68, 1, 31, "Input"],
+Cell[628, 23, 396, 9, 106, "Text"],
+Cell[CellGroupData[{
+Cell[1049, 36, 1524, 46, 132, "Input"],
+Cell[2576, 84, 299, 9, 33, "Output"],
+Cell[2878, 95, 160, 4, 31, "Output"]
+}, Open  ]],
+Cell[3053, 102, 181, 2, 30, "Text"],
+Cell[3237, 106, 94, 1, 31, "Input"],
+Cell[CellGroupData[{
+Cell[3356, 111, 1478, 44, 132, "Input"],
+Cell[4837, 157, 299, 9, 33, "Output"],
+Cell[5139, 168, 158, 4, 31, "Output"]
+}, Open  ]],
+Cell[5312, 175, 249, 6, 72, "Input"],
+Cell[5564, 183, 357, 9, 106, "Text"],
+Cell[CellGroupData[{
+Cell[5946, 196, 1661, 49, 152, "Input"],
+Cell[7610, 247, 294, 9, 35, "Output"],
+Cell[7907, 258, 88, 1, 31, "Output"],
+Cell[7998, 261, 284, 8, 35, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
